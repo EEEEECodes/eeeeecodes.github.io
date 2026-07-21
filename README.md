@@ -1,2 +1,0 @@
-# eeeeecodes.github.io
-hello
