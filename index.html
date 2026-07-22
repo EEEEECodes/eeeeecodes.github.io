@@ -8,7 +8,7 @@
       name="description"
       content="Ethan Lan is an innovative high school student focused on computer science, AI, community service, and technical support."
     >
-    <title>Ethan Lan — Aspiring Computer Scientist</title>
+    <title>Ethan Lan - Aspiring Computer Scientist</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
   </head>
@@ -50,7 +50,7 @@
     </header>
 
     <main id="main-content">
-      <!-- PERSONALIZED: Ethan Lan and the main biography are real. Other names, dates, hours, and links remain SAMPLE CONTENT. -->
+      <!-- PERSONALIZED: Ethan Lan's profile, service history, PyCalc, and SVG symbol generator are real. Education details and the CV URL remain SAMPLE CONTENT. -->
       <section class="hero section" id="about" aria-labelledby="hero-title">
         <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
         <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
@@ -123,10 +123,21 @@
 
           <div class="hero-copy reveal reveal-delay-1">
             <span class="eyebrow"><span></span> Open to learning &amp; collaboration</span>
-            <h1 id="hero-title">Aspiring computer scientist, <em>curious by default.</em></h1>
-            <p class="hero-role">Computer science student · AI explorer · Community tech volunteer</p>
+            <h1 id="hero-title">
+              <span class="sr-only">Curious and innovative aspiring computer scientist.</span>
+              <span class="hero-title-visual" aria-hidden="true">
+                <em class="typewriter-line">
+                  <span
+                    data-typewriter
+                    data-phrases="Curious|Innovative"
+                  >Curious</span><span class="typewriter-cursor"></span>
+                </em>
+                aspiring computer scientist.
+              </span>
+            </h1>
+            <p class="hero-role">Computer science student &middot; AI explorer &middot; Community tech volunteer</p>
             <p class="hero-summary">
-              I’m an innovative and creative high school student dedicated to mastering computer science and AI. I frequently dedicate my time to community service, providing technical support and resolving technology issues.
+              An innovative and creative high school student dedicated to mastering computer science and AI. Frequently dedicates their time to community service, providing technical support and resolving technology issues.
             </p>
 
             <div class="hero-actions">
@@ -134,16 +145,22 @@
                 Explore my work
                 <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"></path></svg>
               </a>
-              <button class="button button-secondary" type="button" data-print>
+              <a
+                class="button button-secondary"
+                href="https://example.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View CV on placeholder website"
+              >
                 <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 3h10v4H7V3Zm11 16v2H6v-2H3v-9h18v9h-3Zm-2 0v-5H8v5h8Zm2-7h1v-1h-1v1Z"></path></svg>
-                Print / Save CV
-              </button>
+                View CV
+              </a>
             </div>
 
             <dl class="hero-facts" aria-label="Profile highlights">
               <div><dt>1</dt><dd>Completed project</dd></div>
               <div><dt>3</dt><dd>Core focus areas</dd></div>
-              <div><dt>170+</dt><dd>Total Service hours</dd></div>
+              <div><dt>170+</dt><dd>Total service hours</dd></div>
             </dl>
           </div>
         </div>
@@ -270,60 +287,79 @@
             <p>Small projects count when they show clear thinking, persistence, and honest progress.</p>
           </header>
 
+          <!-- PERSONALIZED PROJECT: PyCalc began on Replit and is now maintained at github.com/EEEEECodes/PyCalc. -->
           <article class="featured-project reveal">
-            <div class="code-window" aria-label="Python calculator code sample">
+            <div class="code-window" aria-label="Excerpt from the PyCalc 1.04.1 Python source code">
               <div class="code-toolbar">
                 <div aria-hidden="true"><span></span><span></span><span></span></div>
-                <span>calculator.py</span>
+                <span>PyCalc 1.04.1.py</span>
               </div>
-              <pre><code><span class="code-blue">def</span> <span class="code-green">calculate</span>(a, op, b):
-    <span class="code-blue">if</span> op == <span class="code-orange">"+"</span>:
-        <span class="code-blue">return</span> a + b
-    <span class="code-blue">elif</span> op == <span class="code-orange">"-"</span>:
-        <span class="code-blue">return</span> a - b
-    <span class="code-blue">elif</span> op == <span class="code-orange">"*"</span>:
-        <span class="code-blue">return</span> a * b
-    <span class="code-blue">elif</span> op == <span class="code-orange">"/"</span>:
-        <span class="code-blue">return</span> a / b
+              <pre><code><span class="code-blue">if</span> op == <span class="code-orange">"ADD"</span>:
+  var += imput
+<span class="code-blue">elif</span> op == <span class="code-orange">"DIV"</span>:
+  <span class="code-blue">if</span> imput == <span class="code-orange">0</span>:
+    close(<span class="code-orange">"Cannot divide by 0."</span>)
+  <span class="code-blue">else</span>:
+    var /= imput
+<span class="code-muted">...</span>
+<span class="code-blue">elif</span> op == <span class="code-orange">"ROOT"</span>:
+  var = var ** (<span class="code-orange">1</span> / imput)
 
-<span class="code-muted"># Built without AI-generated code.</span></code></pre>
-              <div class="terminal-line"><span>›</span> python calculator.py <strong>42</strong></div>
+<span class="code-muted"># Excerpt from version 1.04.1</span></code></pre>
+              <div class="terminal-line"><span>›</span> ADD → 20 → 22 <strong>42.0</strong></div>
             </div>
 
             <div class="project-copy">
               <span class="card-kicker">Featured project · Python</span>
-              <h3>Four-operation calculator</h3>
+              <h3>Python Calculator</h3>
               <p>
-                A command-line calculator written independently to practice translating a clear set of requirements into working code. It supports addition, subtraction, multiplication, and division with basic input validation.
+                An independently developed, command-driven calculator coded without the use of AI that began on Replit and later moved to GitHub.
               </p>
               <ul class="check-list">
-                <li>Turned a problem into smaller logical steps</li>
-                <li>Used functions and conditional statements</li>
-                <li>Tested common inputs and division edge cases</li>
+                <li>Supports arithmetic, exponents, roots, absolute values, GCF, and LCM</li>
+                <li>Includes integer and float modes, list sorting, memory storage, and command-specific help</li>
+                <li>Uses helper functions and input validation, including protection against division by zero</li>
               </ul>
               <div class="project-meta">
-                <span>Python 3</span><span>Independent project</span><span>2026</span>
+                <span>Python 3</span><span>Replit → GitHub</span><span>Version 1.04.1</span>
               </div>
-              <a class="text-link" href="https://github.com/">
-                View GitHub profile
+              <a
+                class="text-link"
+                href="https://github.com/EEEEECodes/PyCalc"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View the PyCalc repository on GitHub (opens in a new tab)"
+              >
+                View PyCalc on GitHub
                 <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg>
               </a>
             </div>
           </article>
 
+          <!-- PERSONALIZED PROJECT: Active development repository at github.com/EEEEECodes/stuff. -->
           <article class="learning-project reveal">
             <div>
-              <span class="card-kicker">Current learning lab</span>
-              <h3>Understanding how models learn from data</h3>
+              <span class="card-kicker">Active project · AI &amp; computer vision</span>
+              <h3>Line-only SVG symbol generator</h3>
               <p>
-                A guided set of experiments comparing small training datasets, reviewing model outputs, and documenting where results can become inaccurate or biased.
+                I’m building a Python pipeline that trains a conditional convolutional beta-VAE on unlabeled symbol images, then generates novel, resolution-independent SVG paths through random sampling or PNG-guided editing.
               </p>
+              <a
+                class="text-link"
+                href="https://github.com/EEEEECodes/stuff"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View the line-only SVG symbol generator repository on GitHub (opens in a new tab)"
+              >
+                View project on GitHub
+                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg>
+              </a>
             </div>
-            <div class="learning-steps" aria-label="Learning process">
+            <div class="learning-steps" aria-label="Symbol generation pipeline">
               <span><strong>01</strong> Prepare</span>
               <span><strong>02</strong> Train</span>
-              <span><strong>03</strong> Evaluate</span>
-              <span><strong>04</strong> Reflect</span>
+              <span><strong>03</strong> Vectorize</span>
+              <span><strong>04</strong> Verify</span>
             </div>
           </article>
         </div>
@@ -334,10 +370,10 @@
           <header class="section-heading reveal">
             <span class="section-index">05 / SERVICE</span>
             <h2 id="service-title">Time invested in community</h2>
-            <p>Service has helped me practice reliability, teamwork, and listening—skills that matter in technical work too.</p>
+            <p>From historical preservation to museum technology and hands-on STEAM learning, service has strengthened my attention to detail, knowledge, and skills.</p>
             <div class="service-total">
-              <strong>110+</strong>
-              <span>sample hours across<br>three community efforts</span>
+              <strong>170+</strong>
+              <span>service hours across<br>three organizations</span>
             </div>
           </header>
 
@@ -346,36 +382,48 @@
               <div class="timeline-marker" aria-hidden="true"></div>
               <div class="timeline-card">
                 <div class="timeline-topline">
-                  <span>Sep 2024 — Present</span>
-                  <span>60+ hours</span>
+                  <span>June 2024 – Present</span>
+                  <span>50+ hours</span>
                 </div>
-                <h3>Food pantry volunteer</h3>
-                <p class="timeline-org">Harbor Community Food Bank</p>
-                <p>Sort donations, prepare weekly grocery boxes, and help keep distribution days organized and welcoming.</p>
+                <h3>Transcription reviewer</h3>
+                <p class="timeline-org">Library of Congress - By the People Project · Online </p>
+                <ul class="service-responsibilities">
+                  <li>Reviews transcriptions of historical documents.</li>
+                  <li>Corrects transcriptions according to document-specific rules.</li>
+                  <li>Improves public access to historical resources.</li>
+                </ul>
               </div>
             </li>
             <li class="timeline-item reveal reveal-delay-1">
               <div class="timeline-marker" aria-hidden="true"></div>
               <div class="timeline-card">
                 <div class="timeline-topline">
-                  <span>Jan 2025 — Present</span>
-                  <span>30+ hours</span>
+                  <span>May 2025 – Present</span>
+                  <span>100+ hours</span>
                 </div>
-                <h3>Peer technology helper</h3>
-                <p class="timeline-org">Northshore Library</p>
-                <p>Help community members with basic device setup, email, document formatting, and online safety questions.</p>
+                <h3>Museum volunteer</h3>
+                <p class="timeline-org">Dutchess County Sports Museum · Beacon, NY</p>
+                <ul class="service-responsibilities">
+                  <li>Helps cultivate the history of athletes in Dutchess County.</li>
+                  <li>Troubleshoots computers and tablets.</li>
+                  <li>Maintains a publicly accessible virtual catalog of the museum.</li>
+                </ul>
               </div>
             </li>
             <li class="timeline-item reveal reveal-delay-2">
               <div class="timeline-marker" aria-hidden="true"></div>
               <div class="timeline-card">
                 <div class="timeline-topline">
-                  <span>Spring 2025</span>
-                  <span>20+ hours</span>
+                  <span>May 2026 – Present</span>
+                  <span>10+ hours</span>
                 </div>
-                <h3>Coastal cleanup volunteer</h3>
-                <p class="timeline-org">Casco Bay Youth Action</p>
-                <p>Joined weekend cleanup events and recorded collected materials to support local environmental reporting.</p>
+                <h3>Museum volunteer</h3>
+                <p class="timeline-org">Mid-Hudson Discovery Museum · Poughkeepsie, NY</p>
+                <ul class="service-responsibilities">
+                  <li>Runs hands-on STEAM labs combining STEM and art.</li>
+                  <li>Teaches children about science principles.</li>
+                  <li>Patrols and cleans exhibits to ensure a smooth visitor experience.</li>
+                </ul>
               </div>
             </li>
           </ol>
@@ -391,7 +439,7 @@
               <h2 id="contact-title">Have a project, program, or idea I could learn from?</h2>
               <p>I’m always glad to hear about student opportunities, volunteer work, and beginner-friendly ways to contribute.</p>
             </div>
-            <a class="button button-light" href="mailto:student@example.com">
+            <a class="button button-light" href="elan20100@sufsdny.org">
               Start a conversation
               <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg>
             </a>

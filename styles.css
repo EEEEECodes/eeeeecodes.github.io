@@ -91,6 +91,17 @@ button {
   outline-offset: 4px;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .skip-link {
   position: fixed;
   z-index: 1000;
@@ -484,6 +495,33 @@ button {
   color: var(--primary);
   font-family: Georgia, "Times New Roman", serif;
   font-weight: 500;
+}
+
+.hero-title-visual,
+.typewriter-line {
+  display: block;
+}
+
+.typewriter-line {
+  min-height: 1.05em;
+}
+
+.typewriter-cursor {
+  display: inline-block;
+  width: 0.075em;
+  height: 0.78em;
+  margin-left: 0.09em;
+  background: currentColor;
+  border-radius: 0.04em;
+  vertical-align: -0.03em;
+  animation: typewriter-blink 880ms steps(1, end) infinite;
+}
+
+@keyframes typewriter-blink {
+  0%,
+  48% { opacity: 1; }
+  49%,
+  100% { opacity: 0; }
 }
 
 .hero-role {
@@ -1145,6 +1183,19 @@ button {
   font-size: 0.87rem;
 }
 
+.service-responsibilities {
+  display: grid;
+  gap: 0.38rem;
+  margin: 0;
+  padding-left: 1.15rem;
+  color: var(--muted);
+  font-size: 0.87rem;
+}
+
+.service-responsibilities li::marker {
+  color: var(--primary);
+}
+
 .contact-section {
   padding-bottom: clamp(4rem, 7vw, 6rem);
 }
@@ -1423,6 +1474,14 @@ button {
     opacity: 1;
     transform: none;
   }
+
+  .typewriter-line {
+    min-height: auto;
+  }
+
+  .typewriter-cursor {
+    display: none;
+  }
 }
 
 @media print {
@@ -1484,6 +1543,10 @@ button {
   .hero-copy { max-width: none; }
   .eyebrow { padding: 0; background: none; border: 0; }
   .hero h1 { max-width: none; margin: 0.08in 0; font-size: 25pt; }
+  [data-typewriter] { display: none; }
+  .typewriter-line { min-height: auto; }
+  .typewriter-line::before { content: "Curious & innovative"; }
+  .typewriter-cursor { display: none; }
   .hero-summary { margin-top: 0.08in; font-size: 9pt; }
   .hero-facts { margin-top: 0.16in; padding-top: 0.1in; }
   .section-heading { margin-bottom: 0.18in; }

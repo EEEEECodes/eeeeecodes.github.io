@@ -14,18 +14,16 @@ Then visit `http://localhost:8000`.
 
 ## Replace the sample content
 
-The name Ethan Lan and the main biography have been personalized. Organizations, dates, service-hour totals, and contact links remain fictional placeholders. Search `index.html` for `SAMPLE CONTENT` before publishing.
+Ethan Lan’s name, main biography, location, profile links, volunteer history, PyCalc, and line-only SVG symbol generator have been personalized. Some academic details and contact links remain placeholders. Search `index.html` for `SAMPLE CONTENT` before publishing.
 
 At minimum, replace:
 
-- `Northshore High School` and `Portland, Maine`
+- `Northshore High School` in the Education section
 - The biography, graduation date, coursework, and current learning goals
-- The three volunteering entries and all hour totals
-- `student@example.com` and the GitHub/LinkedIn links
-- The calculator repository link once the project is online
+- The `https://example.com` CV link
 - The illustrated avatar, if you want to use a real photo
 
-The print button calls the browser print dialog. Choose “Save as PDF” to create a clean résumé using the included print stylesheet.
+The “View CV” button currently opens `https://example.com`. Replace it with a hosted résumé or portfolio URL. Visitors can still use their browser’s Print command to create a clean résumé using the included print stylesheet.
 
 ## Customize the design
 

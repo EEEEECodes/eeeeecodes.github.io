@@ -10,9 +10,82 @@
   const sections = navLinks
     .map((link) => document.querySelector(link.getAttribute("href")))
     .filter(Boolean);
-  const printButton = document.querySelector("[data-print]");
+  const typewriter = document.querySelector("[data-typewriter]");
   const year = document.querySelector("[data-year]");
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+  if (typewriter) {
+    const phrases = (typewriter.dataset.phrases || "")
+      .split("|")
+      .map((phrase) => phrase.trim())
+      .filter(Boolean);
+
+    if (phrases.length > 1) {
+      let phraseIndex = 0;
+      let characterIndex = phrases[0].length;
+      let isDeleting = true;
+      let typewriterTimer;
+
+      const scheduleTypewriter = (delay) => {
+        window.clearTimeout(typewriterTimer);
+        typewriterTimer = window.setTimeout(runTypewriter, delay);
+      };
+
+      const runTypewriter = () => {
+        if (document.hidden || reduceMotion.matches) return;
+
+        const phrase = phrases[phraseIndex];
+
+        if (isDeleting) {
+          characterIndex = Math.max(0, characterIndex - 1);
+          typewriter.textContent = phrase.slice(0, characterIndex);
+
+          if (characterIndex === 0) {
+            isDeleting = false;
+            phraseIndex = (phraseIndex + 1) % phrases.length;
+            scheduleTypewriter(260);
+          } else {
+            scheduleTypewriter(42);
+          }
+          return;
+        }
+
+        const nextPhrase = phrases[phraseIndex];
+        characterIndex = Math.min(nextPhrase.length, characterIndex + 1);
+        typewriter.textContent = nextPhrase.slice(0, characterIndex);
+
+        if (characterIndex === nextPhrase.length) {
+          isDeleting = true;
+          scheduleTypewriter(1900);
+        } else {
+          scheduleTypewriter(74);
+        }
+      };
+
+      const syncTypewriterMotion = () => {
+        window.clearTimeout(typewriterTimer);
+
+        if (reduceMotion.matches) {
+          typewriter.textContent = "Curious & innovative";
+          return;
+        }
+
+        phraseIndex = 0;
+        characterIndex = phrases[0].length;
+        isDeleting = true;
+        typewriter.textContent = phrases[0];
+        scheduleTypewriter(1900);
+      };
+
+      document.addEventListener("visibilitychange", () => {
+        window.clearTimeout(typewriterTimer);
+        if (!document.hidden && !reduceMotion.matches) scheduleTypewriter(240);
+      });
+
+      reduceMotion.addEventListener?.("change", syncTypewriterMotion);
+      syncTypewriterMotion();
+    }
+  }
 
   if (year) {
     year.textContent = new Date().getFullYear();
@@ -124,5 +197,4 @@
     revealItems.forEach((item) => revealObserver.observe(item));
   }
 
-  printButton?.addEventListener("click", () => window.print());
 })();
