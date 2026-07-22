@@ -448,7 +448,7 @@ button {
   border: 1px solid var(--line);
   border-radius: 50%;
   color: inherit;
-  transition: color 160ms ease, background-color 160ms ease, border-color 160ms ease, transform 140ms var(--ease-out);
+  transition: color 160ms ease, background-color 160ms ease, border-color 160ms ease, box-shadow 180ms ease, transform 140ms var(--ease-out);
   cursor: pointer;
 }
 
@@ -456,10 +456,38 @@ button {
   color: var(--text);
 }
 
+.social-links [data-copy-email] {
+  color: var(--primary);
+  background: rgba(37, 99, 235, 0.13);
+  border-color: rgba(96, 165, 250, 0.38);
+  box-shadow: inset 0 0 0 1px rgba(96, 165, 250, 0.04);
+}
+
+.social-links [data-copy-email]:focus-visible {
+  box-shadow: 0 0 0 5px rgba(96, 165, 250, 0.14), 0 0 24px rgba(37, 99, 235, 0.34);
+}
+
+.social-links button:active {
+  transform: scale(0.96);
+}
+
+.social-links [data-copy-email].is-copied,
+.social-links [data-copy-email].is-copied:hover {
+  color: var(--bg-deep);
+  background: var(--teal);
+  border-color: #5eead4;
+  box-shadow: 0 0 0 5px rgba(20, 184, 166, 0.14), 0 0 26px rgba(20, 184, 166, 0.42);
+}
+
 .social-icon {
   width: 1rem;
   height: 1rem;
   fill: currentColor;
+  transition: transform 180ms var(--ease-out);
+}
+
+.social-links [data-copy-email].is-copied .social-icon {
+  transform: scale(0.88);
 }
 
 .copy-feedback {
@@ -1336,6 +1364,18 @@ button {
     background: var(--primary);
     border-color: var(--primary);
     transform: translateY(-2px);
+  }
+
+  .social-links [data-copy-email]:hover {
+    color: var(--bg-deep);
+    background: var(--primary);
+    border-color: #93c5fd;
+    box-shadow: 0 0 0 5px rgba(96, 165, 250, 0.12), 0 0 28px rgba(37, 99, 235, 0.42);
+    transform: translateY(-2px);
+  }
+
+  .social-links [data-copy-email]:active {
+    transform: scale(0.96);
   }
 
   .button-primary:hover {

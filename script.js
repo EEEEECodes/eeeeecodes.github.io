@@ -37,12 +37,23 @@
     const feedback = button.parentElement?.querySelector(".copy-feedback");
     if (!feedback) return;
 
+    const originalLabel = button.dataset.originalLabel || button.getAttribute("aria-label") || "Copy email address";
+    button.dataset.originalLabel = originalLabel;
+    button.classList.add("is-copied");
+    button.setAttribute("aria-label", "Email address copied");
+    button.title = "Copied!";
     feedback.hidden = false;
     feedback.classList.add("is-visible");
     window.clearTimeout(feedback._hideTimer);
+    window.clearTimeout(button._copyStateTimer);
     feedback._hideTimer = window.setTimeout(() => {
       feedback.classList.remove("is-visible");
       feedback.hidden = true;
+    }, 1400);
+    button._copyStateTimer = window.setTimeout(() => {
+      button.classList.remove("is-copied");
+      button.setAttribute("aria-label", originalLabel);
+      button.title = "Copy email address";
     }, 1400);
   };
 
