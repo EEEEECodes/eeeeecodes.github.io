@@ -14,12 +14,10 @@ Then visit `http://localhost:8000`.
 
 ## Replace the sample content
 
-Ethan Lan’s name, main biography, location, profile links, volunteer history, PyCalc, and line-only SVG symbol generator have been personalized. Some academic details and contact links remain placeholders. Search `index.html` for `SAMPLE CONTENT` before publishing.
+Ethan Lan’s name, biography, location, education, profile links, technical skills, learning goals, volunteer history, PyCalc, and line-only SVG symbol generator have been personalized. The CV link remains a placeholder. Search `index.html` for `SAMPLE CONTENT` before publishing.
 
-At minimum, replace:
+Before publishing, review:
 
-- `Northshore High School` in the Education section
-- The biography, graduation date, coursework, and current learning goals
 - The `https://example.com` CV link
 - The illustrated avatar, if you want to use a real photo
 

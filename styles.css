@@ -808,15 +808,17 @@ button {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
 }
 
 .skill-card {
   position: relative;
-  min-height: 22rem;
+  display: flex;
+  min-width: 0;
   padding: 1.55rem;
   overflow: hidden;
+  flex-direction: column;
   background: rgba(31, 41, 55, 0.84);
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
@@ -857,13 +859,11 @@ button {
 }
 
 .tag-list {
-  position: absolute;
+  position: relative;
   z-index: 1;
-  right: 1.55rem;
-  bottom: 1.55rem;
-  left: 1.55rem;
-  margin: 0;
+  margin: auto 0 0;
   padding: 0;
+  padding-top: 1.5rem;
   list-style: none;
 }
 
@@ -1374,7 +1374,6 @@ button {
   .hero-facts div { grid-template-columns: 1fr; gap: 0; }
 
   .skills-grid { grid-template-columns: 1fr 1fr; }
-  .skill-card:last-child { grid-column: 1 / -1; min-height: 18rem; }
   .featured-project { grid-template-columns: 1fr; }
   .code-window { max-width: 42rem; }
 
@@ -1426,7 +1425,6 @@ button {
   .education-topline { display: grid; gap: 0.8rem; }
   .status-pill { justify-self: start; }
   .skills-grid { grid-template-columns: 1fr; }
-  .skill-card:last-child { grid-column: auto; min-height: 22rem; }
   .split-heading { gap: 0; }
   .featured-project { padding: 0.75rem; border-radius: var(--radius-md); }
   .project-copy { padding: 0.8rem 0.6rem 1rem; }
@@ -1568,7 +1566,7 @@ button {
 
   .skills-grid { gap: 0.12in; }
   .skill-card { min-height: 2.3in; padding: 0.16in; }
-  .tag-list { right: 0.16in; bottom: 0.16in; left: 0.16in; }
+  .tag-list { padding-top: 0.1in; }
   .code-window { box-shadow: none; }
   .service-grid { gap: 0.25in; }
   .timeline { gap: 0.1in; }
