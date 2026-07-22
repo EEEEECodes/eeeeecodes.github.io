@@ -12,7 +12,53 @@
     .filter(Boolean);
   const typewriter = document.querySelector("[data-typewriter]");
   const year = document.querySelector("[data-year]");
+  const copyButtons = document.querySelectorAll("[data-copy-email]");
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+  const copyToClipboard = async (value) => {
+    if (navigator.clipboard?.writeText) {
+      await navigator.clipboard.writeText(value);
+      return true;
+    }
+
+    const tempInput = document.createElement("textarea");
+    tempInput.value = value;
+    tempInput.setAttribute("readonly", "");
+    tempInput.style.position = "fixed";
+    tempInput.style.left = "-9999px";
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    const copied = document.execCommand("copy");
+    document.body.removeChild(tempInput);
+    return copied;
+  };
+
+  const showCopyFeedback = (button) => {
+    const feedback = button.parentElement?.querySelector(".copy-feedback");
+    if (!feedback) return;
+
+    feedback.hidden = false;
+    feedback.classList.add("is-visible");
+    window.clearTimeout(feedback._hideTimer);
+    feedback._hideTimer = window.setTimeout(() => {
+      feedback.classList.remove("is-visible");
+      feedback.hidden = true;
+    }, 1400);
+  };
+
+  copyButtons.forEach((button) => {
+    button.addEventListener("click", async () => {
+      const email = button.getAttribute("data-copy-email");
+      if (!email) return;
+
+      try {
+        const copied = await copyToClipboard(email);
+        if (copied) showCopyFeedback(button);
+      } catch {
+        // Ignore clipboard errors and keep the interaction quiet.
+      }
+    });
+  });
 
   if (typewriter) {
     const phrases = (typewriter.dataset.phrases || "")
