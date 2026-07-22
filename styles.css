@@ -403,7 +403,7 @@ button {
   aspect-ratio: 1;
   place-items: center;
   background: #fff;
-  border: 3px solid var(--bg-deep);
+  border: none;
   border-radius: 50%;
   box-shadow: 0 10px 28px rgba(3, 7, 18, 0.42), 0 0 20px rgba(96, 165, 250, 0.18);
   font-size: 1.35rem;

@@ -1,40 +1,29 @@
-# Marine Academic Portfolio
+# Ethan Lan — Student Portfolio
 
-A polished, dependency-free personal website template for a high-school student interested in computer science and AI. The layout is inspired by an academic CV, but the content is deliberately honest about being early in the learning journey.
+This repository contains the personal portfolio of Ethan Lan, an 11th-grade student at Spackenkill High School interested in computer science and artificial intelligence. The site highlights a 4.0+ GPA, technical projects, developing research interests, and more than 170 total hours of volunteer service.
 
-## Preview locally
+## Research direction
 
-You can open `index.html` directly in a browser. For the most reliable local preview, start any static file server in this directory, for example:
+Ethan is exploring secure local and decentralized AI training, with a particular interest in detecting and mitigating Sybil attacks in collaborative training systems. A related potential direction is quantifying AI’s environmental impact through energy-use and carbon-cost measurements.
 
-```powershell
-python -m http.server 8000
-```
+## Education and skills
 
-Then visit `http://localhost:8000`.
+Current coursework includes AP Computer Science A, AP Chemistry, and Precalculus. Technical experience includes:
 
-## Replace the sample content
+- Python development, debugging, and data processing
+- Machine learning and data tools including PyTorch, Keras, scikit-learn, NumPy, pandas, and Matplotlib
+- HTML, CSS, JavaScript, and MIT App Inventor
+- Git, Linux, VS Code, Windows command-line tools, and OpenAI Codex
 
-Ethan Lan’s name, biography, location, education, profile links, technical skills, learning goals, volunteer history, PyCalc, and line-only SVG symbol generator have been personalized. The CV link remains a placeholder. Search `index.html` for `SAMPLE CONTENT` before publishing.
+## Projects
 
-Before publishing, review:
+- **[PyCalc](https://github.com/EEEEECodes/PyCalc):** A command-driven Python calculator supporting arithmetic, roots, exponents, memory storage, list sorting, input validation, and other utilities.
+- **[SymbolProject](https://github.com/EEEEECodes/SymbolProject):** An active AI and computer-vision project that trains a conditional convolutional beta-VAE to generate line-only, resolution-independent SVG symbols.
 
-- The `https://example.com` CV link
-- The illustrated avatar, if you want to use a real photo
+## Community service
 
-The “View CV” button currently opens `https://example.com`. Replace it with a hosted résumé or portfolio URL. Visitors can still use their browser’s Print command to create a clean résumé using the included print stylesheet.
+The portfolio documents 170+ service hours across the Library of Congress By the People project, the Dutchess County Sports Museum, and the Mid-Hudson Discovery Museum. Work includes reviewing historical transcriptions, maintaining museum technology and digital records, and supporting hands-on STEAM learning.
 
-## Customize the design
+## Site details
 
-The main design tokens are at the top of `styles.css`. Change the colors, container width, spacing, radii, shadows, and animation curves there. Icons and the avatar are inline SVG, so the template has no image, font, or icon-library dependency.
-
-## Add another page later
-
-1. Copy `index.html` to a new file such as `projects.html`.
-2. Keep the skip link, site header, footer, `styles.css`, and `script.js` references.
-3. Replace the `<main>` content with the new page content.
-4. Reuse the existing `.section`, `.card`, `.button`, `.tag-list`, and `.timeline` components.
-5. Change navigation anchor links to root-relative page links when deploying at a custom domain, or repository-relative links when deploying as a GitHub project page.
-
-## Deploy to GitHub Pages
-
-Push these files to a GitHub repository, open **Settings → Pages**, choose **Deploy from a branch**, and select the branch containing `index.html`. No build command is required.
+The website is built with plain HTML, CSS, and JavaScript.
